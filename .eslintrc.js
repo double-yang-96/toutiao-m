@@ -13,5 +13,6 @@ module.exports = {
     quotes: "off",
     semi: "off",
     "comma-dangle": "off",
+    "vue/multi-word-component-names": "off",
   },
 };
