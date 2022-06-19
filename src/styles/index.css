@@ -230,6 +230,11 @@ hr {
 input,
 select {
   vertical-align: middle;
+  background: transparent;
+}
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected {
+  transition: background-color 5000s ease-out 0.5s;
 }
 body {
   background-color: #f5f7f9;
@@ -237,6 +242,7 @@ body {
 .van-nav-bar.page-nav-bar {
   background-color: #3296fa;
 }
-.van-nav-bar.page-nav-bar .van-nav-bar__title {
+.van-nav-bar.page-nav-bar .van-nav-bar__title,
+.van-nav-bar.page-nav-bar .van-icon {
   color: #fff;
 }
