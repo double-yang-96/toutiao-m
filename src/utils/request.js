@@ -15,12 +15,12 @@ request.interceptors.request.use(
     // 请求发起会经过这里
     // config ：本次请求的请求配置对象
     // return config;
-    console.log(config);
+    // console.log(config);
     const { user } = store.state;
-    console.log(user);
+    // console.log(user);
     if (user && user.token) {
       config.headers.Authorization = `Bearer ${user.token}`;
-      console.log(config);
+      // console.log(config);
     }
     // 注意，这里务必要返回 config 配置对象，否则请求就停留在这里出不去
     return config;
