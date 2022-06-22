@@ -10,6 +10,7 @@
         size="small"
         icon="search"
         type="info"
+        to="/search"
         >搜索</van-button
       >
     </van-nav-bar>
@@ -83,11 +84,11 @@ export default {
   },
   methods: {
     async loadChannels() {
+      let channels = [];
       try {
         // const { data } = await getUserChannels();
         // // console.log(data);
         // this.channels = data.data.channels;
-        let channels = [];
 
         if (this.user) {
           // 已登录，请求获取用户频道列表
@@ -105,6 +106,7 @@ export default {
             channels = data.data.channels;
           }
         }
+        this.channels = channels;
       } catch (err) {
         console.log("获取频道数据失败");
       }

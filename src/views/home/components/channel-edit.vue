@@ -62,11 +62,11 @@ export default {
   props: {
     myChannels: {
       type: Array,
-      require: true,
+      required: true,
     },
     active: {
       type: Number,
-      require: true,
+      required: true,
     },
   },
   data() {
