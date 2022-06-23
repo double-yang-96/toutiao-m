@@ -15,6 +15,12 @@ const routes = [
     component: () => import("@/views/search"),
   },
   {
+    path: "/article/:articleId",
+    name: "article",
+    component: () => import("@/views/article"),
+    props: true, // 开启Props传参，把路由参数映射到组件的props数据中
+  },
+  {
     path: "/",
     name: "layout",
     redirect: "/home",
